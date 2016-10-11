@@ -11,16 +11,16 @@
         <scene sceneID="wrr-7D-rFd">
             <objects>
                 <tableViewController id="VLA-Ld-rJK" customClass="TableViewController" customModule="StretchMyHeader2" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="74" sectionHeaderHeight="28" sectionFooterHeight="28" id="0vI-sk-bQ9" customClass="table">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="89" sectionHeaderHeight="28" sectionFooterHeight="28" id="0vI-sk-bQ9" customClass="table">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="newsCell" rowHeight="74" id="nYr-36-9rs" customClass="CustomTableViewCell" customModule="StretchMyHeader2" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="375" height="74"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="newsCell" rowHeight="89" id="nYr-36-9rs" customClass="CustomTableViewCell" customModule="StretchMyHeader2" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="375" height="89"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nYr-36-9rs" id="v3a-Gc-YhW">
-                                    <frame key="frameInset" width="375" height="73"/>
+                                    <frame key="frameInset" width="375" height="88"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LMA-YA-HCx">
@@ -28,18 +28,19 @@
                                             <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Headline" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jEA-QE-51z">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Headline sdfasdfsadfasdf afasdfsa as fdasdfa a sfdasdf asdf asdf asdf asdf as " textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jEA-QE-51z">
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailingMargin" secondItem="jEA-QE-51z" secondAttribute="trailing" id="2Q2-dp-seU"/>
-                                        <constraint firstItem="jEA-QE-51z" firstAttribute="top" secondItem="LMA-YA-HCx" secondAttribute="bottom" constant="8" id="9Ul-Zx-Jcs"/>
-                                        <constraint firstAttribute="leadingMargin" secondItem="jEA-QE-51z" secondAttribute="leading" id="GqW-iu-Nj8"/>
-                                        <constraint firstAttribute="topMargin" secondItem="LMA-YA-HCx" secondAttribute="top" id="S7g-L9-7pg"/>
-                                        <constraint firstAttribute="leadingMargin" secondItem="LMA-YA-HCx" secondAttribute="leading" id="uq6-3y-DMB"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="jEA-QE-51z" secondAttribute="bottom" constant="2" id="7B5-A4-XaJ"/>
+                                        <constraint firstAttribute="trailing" secondItem="jEA-QE-51z" secondAttribute="trailing" constant="8" id="HqL-Pi-Gm2"/>
+                                        <constraint firstItem="LMA-YA-HCx" firstAttribute="top" secondItem="v3a-Gc-YhW" secondAttribute="topMargin" id="O01-ej-wcW"/>
+                                        <constraint firstItem="jEA-QE-51z" firstAttribute="leading" secondItem="v3a-Gc-YhW" secondAttribute="leading" constant="8" id="pMH-45-Rvf"/>
+                                        <constraint firstItem="LMA-YA-HCx" firstAttribute="leading" secondItem="v3a-Gc-YhW" secondAttribute="leadingMargin" id="scj-Jw-Ky1"/>
+                                        <constraint firstItem="jEA-QE-51z" firstAttribute="top" secondItem="LMA-YA-HCx" secondAttribute="bottom" constant="8" id="zfc-gd-ejc"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
