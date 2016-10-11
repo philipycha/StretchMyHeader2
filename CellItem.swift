@@ -10,31 +10,56 @@ import UIKit
 
 struct CellItem {
     
-    enum Category: String {
-        case World = "World"
-        case Americas = "Americas"
-        case Europe = "Europe"
-        case MiddleEast = "Middle East"
-        case Africa = "Africa"
-        case AsiaPacific = "Asia Pacific"
-    }
-    
-    enum Headline: String {
-        case World = "South Africa in $40 billion deal for Russian nuclear reactors"
-        case Americas = "Officials: FBI is tracking 100 Americans who fought alongside IS in Syria"
-        case Europe = "Scotland's 'Yes' leader says independence vote is 'once in a lifetime'"
-        case MiddleEast = "Airstrikes boost Islamic State, FBI director warns more hostages possible"
-        case Africa = "Nigeria says 70 dead in building collapse; questions S. Africa victim claim"
-        case AsiaPacific = "Despite UN ruling, Japan seeks backing for whale hunting"
+    enum Category {
+        case World
+        case Americas
+        case Europe
+        case MiddleEast
+        case Africa
+        case AsiaPacific
+        
+        func toString() -> String {
+            switch self {
+            case .World:
+                return "World"
+            case .Americas:
+                return "Americas"
+            case .Europe:
+                return "Europe"
+            case .MiddleEast:
+                return "Middle East"
+            case .Africa:
+                return "Africa"
+            case .AsiaPacific:
+                return "Asia Pacific"
+            }
+        }
+        
+        func toColor() -> UIColor {
+            switch self {
+            case .World:
+                return .red
+            case .Americas:
+                return .blue
+            case .Europe:
+                return .green
+            case .MiddleEast:
+                return .yellow
+            case .Africa:
+                return .orange
+            case .AsiaPacific:
+                return .purple
+            }
+        }
     }
     
     var category: Category
-    var headline: Headline
+    var headline: String
     
-    init(category: Category, headline: Headline) {
+    // MARK: Initialization
+    
+    init(category: Category, headline: String) {
         self.category = category
         self.headline = headline
     }
 }
-
-

@@ -16,11 +16,12 @@ class CustomTableViewCell: UITableViewCell {
     var newsItem: CellItem? {
         didSet {
             if let item = newsItem {
-                categoryLabel.text = item.category.rawValue
-                
+                categoryLabel.text = item.category.toString()
+                categoryLabel.textColor = item.category.toColor()
+                headlineLabel.text = item.headline
             } else {
-                categoryLabel.text = "ERROR"
-                headlineLabel.text = "ERROR"
+                categoryLabel.text = nil
+                headlineLabel.text = nil
             }
         }
     }

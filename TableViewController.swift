@@ -15,17 +15,18 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationItem.rightBarButtonItem = self.editButtonItem
+//        self.navigationItem.rightBarButtonItem = self.editButtonItem
         
-        let news1 = CellItem(category: .World, headline: .World)
-        let news2 = CellItem(category: .Americas, headline: .Americas)
-        let news3 = CellItem(category: .Europe, headline: .Europe)
-        let news4 = CellItem(category: .MiddleEast, headline: .MiddleEast)
-        let news5 = CellItem(category: .Africa, headline: .Africa)
-        let news6 = CellItem(category: .AsiaPacific, headline: .AsiaPacific)
+        let news1 = CellItem(category: .World, headline: "Climate change protests, divestments meet fossil fuels realities")
+        let news2 = CellItem(category: .Europe, headline: "Scotland's 'Yes' leader says independence vote is 'once in a lifetime'")
+        let news3 = CellItem(category: .MiddleEast, headline:  "Airstrikes boost Islamic State, FBI director warns more hostages possible")
+        let news4 = CellItem(category: .Africa, headline: "Nigeria says 70 dead in building collapse; questions S. Africa victim claim")
+        let news5 = CellItem(category: .AsiaPacific, headline: "Despite UN ruling, Japan seeks backing for whale hunting")
+        let news6 = CellItem(category: .Americas, headline: "Officials: FBI is tracking 100 Americans who fought alongside IS in Syria")
+        let news7 = CellItem(category: .World, headline: "South Africa in $40 billion deal for Russian nuclear reactors")
+        let news8 = CellItem(category: .Europe, headline: "'One million babies' created by EU student exchanges")
         
-        newsItems = [news1, news2, news3, news4, news5, news6]
-        
+        newsItems = [news1, news2, news3, news4, news5, news6, news7, news8]
         
     }
     
@@ -50,9 +51,8 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> CustomTableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "newsCell", for: indexPath) as! CustomTableViewCell
         
-        cell.categoryLabel.text = newsItems[indexPath.row].category.rawValue
-        
-        cell.headlineLabel.text = newsItems[indexPath.row].headline.rawValue
+        let item = newsItems[indexPath.row]
+        cell.newsItem = item
         
         return cell
     }
