@@ -10,12 +10,25 @@ import UIKit
 
 class TableViewController: UITableViewController {
     
+    @IBOutlet weak var dateLabel: UILabel!
+    
     var newsItems = [CellItem]()
+    
+    override var prefersStatusBarHidden: Bool {
+        get {
+            return true
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        self.navigationItem.rightBarButtonItem = self.editButtonItem
+        let currentDate = Date()
+        let dateFormatter = DateFormatter()
+        
+        dateFormatter.dateStyle = DateFormatter.Style.long
+        let date = dateFormatter.string(from: currentDate as Date)
+        dateLabel.text = date
         
         let news1 = CellItem(category: .World, headline: "Climate change protests, divestments meet fossil fuels realities")
         let news2 = CellItem(category: .Europe, headline: "Scotland's 'Yes' leader says independence vote is 'once in a lifetime'")

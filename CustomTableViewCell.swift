@@ -17,7 +17,7 @@ class CustomTableViewCell: UITableViewCell {
         didSet {
             if let item = newsItem {
                 categoryLabel.text = item.category.toString()
-                categoryLabel.textColor = item.category.toColor()
+                categoryLabel.textColor = item.category.textColor()
                 headlineLabel.text = item.headline
             } else {
                 categoryLabel.text = nil

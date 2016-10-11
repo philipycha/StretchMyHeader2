@@ -35,7 +35,7 @@ struct CellItem {
             }
         }
         
-        func toColor() -> UIColor {
+        func textColor() -> UIColor {
             switch self {
             case .World:
                 return .red
@@ -55,9 +55,7 @@ struct CellItem {
     
     var category: Category
     var headline: String
-    
-    // MARK: Initialization
-    
+        
     init(category: Category, headline: String) {
         self.category = category
         self.headline = headline

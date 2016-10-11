@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Tai-2Y-NeZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="VLA-Ld-rJK">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -15,9 +15,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="S9i-Ve-Op6">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="244"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hong-kong" translatesAutoresizingMaskIntoConstraints="NO" id="GiV-Qt-Wq7"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rlQ-TA-UNO">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="GiV-Qt-Wq7" firstAttribute="leading" secondItem="S9i-Ve-Op6" secondAttribute="leading" id="Da2-V5-7wJ"/>
+                                <constraint firstAttribute="trailing" secondItem="GiV-Qt-Wq7" secondAttribute="trailing" id="F5s-u9-e6U"/>
+                                <constraint firstAttribute="bottom" secondItem="GiV-Qt-Wq7" secondAttribute="bottom" id="UYa-P4-f2e"/>
+                                <constraint firstItem="GiV-Qt-Wq7" firstAttribute="top" secondItem="S9i-Ve-Op6" secondAttribute="top" id="gaW-QJ-g9c"/>
+                                <constraint firstItem="rlQ-TA-UNO" firstAttribute="top" secondItem="S9i-Ve-Op6" secondAttribute="top" constant="8" id="pdb-JR-NwS"/>
+                                <constraint firstItem="rlQ-TA-UNO" firstAttribute="leading" secondItem="S9i-Ve-Op6" secondAttribute="leading" constant="8" id="zXA-qd-EIV"/>
+                            </constraints>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="newsCell" rowHeight="89" id="nYr-36-9rs" customClass="CustomTableViewCell" customModule="StretchMyHeader2" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="375" height="89"/>
+                                <rect key="frame" x="0.0" y="272" width="375" height="89"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nYr-36-9rs" id="v3a-Gc-YhW">
                                     <frame key="frameInset" width="375" height="88"/>
@@ -55,28 +76,16 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="IHe-5d-Cho"/>
+                    <connections>
+                        <outlet property="dateLabel" destination="rlQ-TA-UNO" id="voc-z3-7qs"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vky-Hr-ill" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="410.39999999999998" y="62.518740629685162"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="mNY-wT-FSy">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Tai-2Y-NeZ" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UMw-uE-1Sp">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="VLA-Ld-rJK" kind="relationship" relationship="rootViewController" id="PFm-e6-57e"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4hn-4A-xJv" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-258" y="63"/>
-        </scene>
     </scenes>
+    <resources>
+        <image name="hong-kong" width="2320" height="1360"/>
+    </resources>
 </document>
