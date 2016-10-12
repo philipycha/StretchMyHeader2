@@ -78,6 +78,7 @@
                     <navigationItem key="navigationItem" id="IHe-5d-Cho"/>
                     <connections>
                         <outlet property="dateLabel" destination="rlQ-TA-UNO" id="voc-z3-7qs"/>
+                        <outlet property="tableHeaderView" destination="S9i-Ve-Op6" id="3zv-e5-i1e"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vky-Hr-ill" userLabel="First Responder" sceneMemberID="firstResponder"/>
