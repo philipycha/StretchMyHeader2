@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TableViewController: UITableViewController{
+class TableViewController: UITableViewController {
     
     @IBOutlet weak var tableHeaderView: UIView!
     @IBOutlet weak var dateLabel: UILabel!
